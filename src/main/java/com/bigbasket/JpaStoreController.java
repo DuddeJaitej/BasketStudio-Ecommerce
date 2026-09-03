@@ -71,8 +71,11 @@ public class JpaStoreController {
         String email = request.email().toLowerCase(Locale.ROOT);
         if (users.findByEmailIgnoreCase(email).isPresent())
             throw new ResponseStatusException(HttpStatus.CONFLICT, "An account already exists for this email");
+        LocalDate dateOfBirth = LocalDate.parse(request.dateOfBirth());
+        if (dateOfBirth.isAfter(LocalDate.now()))
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Date of birth must be in the past");
         UserEntity user = users.save(new UserEntity(request.name(), email, hash(request.password()), request.phone(),
-                LocalDate.parse(request.dateOfBirth())));
+                dateOfBirth));
         return loginUser(user, request.password());
     }
 
