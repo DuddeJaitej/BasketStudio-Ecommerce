@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # BasketStudio-Ecommerce
 =======
 # Basket Studio
