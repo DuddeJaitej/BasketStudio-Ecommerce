@@ -331,7 +331,7 @@ Execute [database/schema-mysql.sql](database/schema-mysql.sql) in the managed My
 
 1. Open Vercel and choose **Add New Project**.
 2. Import the GitHub repository.
-3. Set the project root directory to `src/main/resources/static`.
+3. Leave the project root directory as the repository root. The included `vercel.json` routes the static frontend from `src/main/resources/static`.
 4. Choose **Other** as the framework preset.
 5. Leave the build command empty and use `.` as the output directory.
 6. Deploy.
@@ -348,4 +348,3 @@ fetch(`${API_BASE}/api/products`);
 ```
 
 Do not add a trailing slash to `API_BASE`. Also configure CORS on the backend for the exact Vercel domain.
->>>>>>> b7f94ae (Initial Basket Studio application)
