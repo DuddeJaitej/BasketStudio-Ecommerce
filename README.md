@@ -336,15 +336,14 @@ Execute [database/schema-mysql.sql](database/schema-mysql.sql) in the managed My
 5. Leave the build command empty and use `.` as the output directory.
 6. Deploy.
 
-The Vercel site will serve the UI. Login, profile, and checkout will work after the backend URL is configured in `app.js`, `login.js`, and `profile.js`.
+The Vercel site will serve the UI. Login, profile, and checkout will work after the backend URL is configured in `api-config.js`.
 
 ### Frontend API URL
 
-The current frontend uses relative `/api` requests because it normally runs from Spring Boot. For separate Vercel hosting, define the deployed backend URL and prepend it to every API request:
+The current frontend uses relative `/api` requests because it normally runs from Spring Boot. For separate Vercel hosting, edit `src/main/resources/static/api-config.js` and set the deployed backend URL:
 
 ```javascript
-const API_BASE = 'https://your-backend-host.example.com';
-fetch(`${API_BASE}/api/products`);
+window.BASKET_API_URL = 'https://your-backend-host.example.com';
 ```
 
-Do not add a trailing slash to `API_BASE`. Also configure CORS on the backend for the exact Vercel domain.
+Push that change to GitHub so Vercel redeploys it. Do not add a trailing slash. The bridge automatically applies the URL to requests from `app.js`, `login.js`, and `profile.js`. Also configure CORS on the backend for the exact Vercel domain.
