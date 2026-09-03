@@ -1,5 +1,5 @@
 # BasketStudio-Ecommerce
-=======
+
 # Basket Studio
 
 > A premium grocery shopping application with a responsive storefront, basket checkout, user profiles, order history, and a Spring Boot backend.
