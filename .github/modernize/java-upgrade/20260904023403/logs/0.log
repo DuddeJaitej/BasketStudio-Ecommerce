@@ -1,0 +1,500 @@
+2026-09-04T02:39:53.299Z [INFO] ---------------------prepare appmod-build-java-project----------------------
+2026-09-04T02:39:53.300Z [INFO] [Tool.prepareInvocation]({name: appmod-build-java-project, input: {
+  "sessionId": "20260904023403",
+  "projectPath": "d:\\BigBasket-main\\BigBasket-main",
+  "jdkPath": "C:\\Program Files\\Java\\jdk-17",
+  "buildToolPath": "C:\\Program Files\\apache-maven-3.9.14"
+}}).
+2026-09-04T02:39:53.300Z [INFO] [Tool.prepareInvocation] do prepare invocation.
+2026-09-04T02:39:53.300Z [INFO] [Tool.prepareInvocation]({result: {
+  "invocationMessage": "Build project"
+}}).
+2026-09-04T02:39:53.300Z [INFO] ----------------------prepared appmod-build-java-project----------------------
+2026-09-04T02:39:53.357Z [INFO] ----------------------invoke appmod-build-java-project----------------------
+2026-09-04T02:39:53.357Z [INFO] [Tool.invoke]({name: appmod-build-java-project, modelId: auto, input: {
+  "sessionId": "20260904023403",
+  "projectPath": "d:\\BigBasket-main\\BigBasket-main",
+  "jdkPath": "C:\\Program Files\\Java\\jdk-17",
+  "buildToolPath": "C:\\Program Files\\apache-maven-3.9.14"
+}}).
+2026-09-04T02:39:53.358Z [INFO] [Tool.invoke] do invoke.
+2026-09-04T02:39:53.358Z [INFO] Project d:\BigBasket-main\BigBasket-main is a maven project, try to get java version from pom.xml
+2026-09-04T02:39:53.359Z [INFO] Project java version: 17
+2026-09-04T02:39:53.359Z [INFO] Build tool type detected from path: mvn
+2026-09-04T02:39:53.359Z [INFO] Build tool type: mvn
+2026-09-04T02:39:53.359Z [INFO] JDK: {
+  "name": "java",
+  "path": "C:\\Program Files\\Java\\jdk-17\\bin",
+  "version": "17"
+}
+2026-09-04T02:39:53.359Z [INFO] Build tool: {
+  "name": "mvn",
+  "path": "C:\\Program Files\\apache-maven-3.9.14\\bin",
+  "version": ""
+}
+2026-09-04T02:39:53.359Z [INFO] Project config: {
+  "buildTool": {
+    "path": "C:\\Program Files\\apache-maven-3.9.14\\bin",
+    "name": "mvn",
+    "version": ""
+  },
+  "jdk": {
+    "path": "C:\\Program Files\\Java\\jdk-17\\bin",
+    "name": "java",
+    "version": "17"
+  },
+  "name": "BigBasket-main",
+  "dir": "d:\\BigBasket-main\\BigBasket-main"
+}
+2026-09-04T02:39:53.360Z [INFO] [MavenBuildTool] Getting build errors of d:\BigBasket-main\BigBasket-main using Maven
+2026-09-04T02:39:53.362Z [INFO] [Environment] Running command (Java undefined): mvn clean test-compile -q -B -fn -Dossindex.skip=true -Dlicense.skip=true -Dcheckstyle.skip=true -DskipLicenseCheck=true -DskipCheckStyle=true -Dpmd.skip=true -Denforcer.skip=true -Drat.skip=true
+2026-09-04T02:40:00.794Z [INFO] [MavenBuildTool] parsing compilation errors.
+2026-09-04T02:40:00.796Z [INFO] [MavenBuildTool] Getting all module coordinates of d:\BigBasket-main\BigBasket-main
+2026-09-04T02:40:00.796Z [INFO] [MavenBuildTool] Getting effective POMs of d:\BigBasket-main\BigBasket-main
+2026-09-04T02:40:00.800Z [INFO] [Environment] Running command (Java undefined): mvn help:effective-pom -Doutput=effective-pom-85434dcb-b6b8-4c77-8e60-2469f3732a33.log
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------< com.bigbasket:basket-studio >---------------------
+[INFO] Building basket-studio 1.0.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- help:3.4.1:effective-pom (default-cli) @ basket-studio ---
+[INFO] Effective-POM written to: d:\BigBasket-main\BigBasket-main\effective-pom-85434dcb-b6b8-4c77-8e60-2469f3732a33.log
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.463 s
+[INFO] Finished at: 2026-09-04T08:10:04+05:30
+[INFO] ------------------------------------------------------------------------
+2026-09-04T02:40:04.433Z [INFO] [BaseBuildTool] Found 1 modules: .
+2026-09-04T02:40:04.448Z [INFO] [BaseBuildTool] Finish counting Java and class files
+2026-09-04T02:40:04.448Z [INFO] [MavenBuildTool] Cleaning d:\BigBasket-main\BigBasket-main using Maven
+2026-09-04T02:40:04.450Z [INFO] [Environment] Running command (Java undefined): mvn clean -q -B -fn
+2026-09-04T02:40:07.116Z [INFO] [MavenBuildTool] Getting Java version of d:\BigBasket-main\BigBasket-main from pom.xml
+2026-09-04T02:40:07.117Z [INFO] [MavenBuildTool] Searching for pom.xml files in d:\BigBasket-main\BigBasket-main
+2026-09-04T02:40:07.117Z [INFO] Build succeeded! There are no build errors in the project.
+2026-09-04T02:40:07.117Z [INFO] [MavenBuildTool] Found pom.xml files: d:\BigBasket-main\BigBasket-main\pom.xml
+2026-09-04T02:40:07.117Z [INFO] [Tool.invoke]({result: {
+  "message": "Build succeeded! There are no build errors in the project.",
+  "result": {
+    "numOfJavaFiles": 9,
+    "numOfClassFiles": 9,
+    "modulesBuildResult": {
+      ".": {
+        "numOfJavaFiles": 9,
+        "numOfClassFiles": 9
+      }
+    },
+    "errors": [],
+    "command": "mvn clean test-compile -q -B -fn -Dossindex.skip=true -Dlicense.skip=true -Dcheckstyle.skip=true -DskipLicenseCheck=true -DskipCheckStyle=true -Dpmd.skip=true -Denforcer.skip=true -Drat.skip=true"
+  },
+  "telemetry": {
+    "result": "succeeded"
+  }
+}}).
+2026-09-04T02:40:07.117Z [INFO] ----------------------invoked appmod-build-java-project----------------------
+2026-09-04T02:40:07.119Z [INFO] [MavenBuildTool] Java version found in d:\BigBasket-main\BigBasket-main\pom.xml: 17
+2026-09-04T02:40:09.734Z [INFO] ---------------------prepare appmod-report-event----------------------
+2026-09-04T02:40:09.734Z [INFO] [Tool.prepareInvocation]({name: appmod-report-event, input: {
+  "sessionId": "20260904023403",
+  "projectPath": "d:\\BigBasket-main\\BigBasket-main",
+  "event": "buildCompleted",
+  "status": "succeeded",
+  "phase": "execute",
+  "message": "Baseline compilation succeeded with JDK 17 and Maven 3.9.14."
+}}).
+2026-09-04T02:40:09.734Z [INFO] [Tool.prepareInvocation] do prepare invocation.
+2026-09-04T02:40:09.735Z [INFO] [Tool.prepareInvocation]({result: {
+  "invocationMessage": "Report upgrade event"
+}}).
+2026-09-04T02:40:09.735Z [INFO] ----------------------prepared appmod-report-event----------------------
+2026-09-04T02:40:09.816Z [INFO] ----------------------invoke appmod-report-event----------------------
+2026-09-04T02:40:09.817Z [INFO] [Tool.invoke]({name: appmod-report-event, modelId: auto, input: {
+  "sessionId": "20260904023403",
+  "projectPath": "d:\\BigBasket-main\\BigBasket-main",
+  "event": "buildCompleted",
+  "status": "succeeded",
+  "phase": "execute",
+  "message": "Baseline compilation succeeded with JDK 17 and Maven 3.9.14."
+}}).
+2026-09-04T02:40:09.817Z [INFO] [Tool.invoke] do invoke.
+2026-09-04T02:40:09.818Z [INFO] Project d:\BigBasket-main\BigBasket-main is a maven project, try to get java version from pom.xml
+2026-09-04T02:40:09.819Z [INFO] [Tool.invoke]({result: {
+  "message": "Event 'buildCompleted' reported!\nSession ID: 20260904023403,\nSession Dir: d:\\BigBasket-main\\BigBasket-main\\.github\\modernize\\java-upgrade\\20260904023403"
+}}).
+2026-09-04T02:40:09.820Z [INFO] ----------------------invoked appmod-report-event----------------------
+2026-09-04T02:40:09.867Z [INFO] Project java version: 17
+2026-09-04T02:40:09.867Z [INFO] Maven project detected.
+2026-09-04T02:40:09.868Z [INFO] Build tool type: mvn
+2026-09-04T02:40:09.912Z [INFO] JDK: {
+  "name": "java",
+  "path": "C:\\Program Files\\Java\\jdk-17\\bin",
+  "version": "17"
+}
+2026-09-04T02:40:09.916Z [INFO] Build tool: {
+  "name": "mvn",
+  "path": "C:\\Program Files\\apache-maven-3.9.14\\bin",
+  "version": "",
+  "source": "MAVEN_HOME,PATH"
+}
+2026-09-04T02:40:09.916Z [INFO] Project config: {
+  "buildTool": {
+    "path": "C:\\Program Files\\apache-maven-3.9.14\\bin",
+    "name": "mvn",
+    "version": "",
+    "source": "MAVEN_HOME,PATH"
+  },
+  "jdk": {
+    "path": "C:\\Program Files\\Java\\jdk-17\\bin",
+    "name": "java",
+    "version": "17"
+  },
+  "name": "BigBasket-main",
+  "dir": "d:\\BigBasket-main\\BigBasket-main"
+}
+2026-09-04T02:40:09.916Z [INFO] [MavenBuildTool] Getting all module coordinates of d:\BigBasket-main\BigBasket-main
+2026-09-04T02:40:09.916Z [INFO] [MavenBuildTool] Getting effective POMs of d:\BigBasket-main\BigBasket-main
+2026-09-04T02:40:09.918Z [INFO] [Environment] Running command (Java undefined): mvn help:effective-pom -Doutput=effective-pom-18424a15-a159-4cfc-9745-5693079a4195.log
+2026-09-04T02:40:11.591Z [INFO] ---------------------prepare appmod-run-tests-for-java----------------------
+2026-09-04T02:40:11.591Z [INFO] [Tool.prepareInvocation]({name: appmod-run-tests-for-java, input: {
+  "sessionId": "20260904023403",
+  "projectPath": "d:\\BigBasket-main\\BigBasket-main",
+  "jdkPath": "C:\\Program Files\\Java\\jdk-17",
+  "buildToolPath": "C:\\Program Files\\apache-maven-3.9.14"
+}}).
+2026-09-04T02:40:11.591Z [INFO] [Tool.prepareInvocation] do prepare invocation.
+2026-09-04T02:40:11.592Z [INFO] [Tool.prepareInvocation]({result: {
+  "invocationMessage": "Run tests"
+}}).
+2026-09-04T02:40:11.592Z [INFO] ----------------------prepared appmod-run-tests-for-java----------------------
+2026-09-04T02:40:11.663Z [INFO] ----------------------invoke appmod-run-tests-for-java----------------------
+2026-09-04T02:40:11.664Z [INFO] [Tool.invoke]({name: appmod-run-tests-for-java, modelId: auto, input: {
+  "sessionId": "20260904023403",
+  "projectPath": "d:\\BigBasket-main\\BigBasket-main",
+  "jdkPath": "C:\\Program Files\\Java\\jdk-17",
+  "buildToolPath": "C:\\Program Files\\apache-maven-3.9.14"
+}}).
+2026-09-04T02:40:11.664Z [INFO] [Tool.invoke] do invoke.
+2026-09-04T02:40:11.665Z [INFO] Project d:\BigBasket-main\BigBasket-main is a maven project, try to get java version from pom.xml
+2026-09-04T02:40:11.677Z [INFO] Project java version: 17
+2026-09-04T02:40:11.678Z [INFO] Build tool type detected from path: mvn
+2026-09-04T02:40:11.678Z [INFO] Build tool type: mvn
+2026-09-04T02:40:11.678Z [INFO] JDK: {
+  "name": "java",
+  "path": "C:\\Program Files\\Java\\jdk-17\\bin",
+  "version": "17"
+}
+2026-09-04T02:40:11.678Z [INFO] Build tool: {
+  "name": "mvn",
+  "path": "C:\\Program Files\\apache-maven-3.9.14\\bin",
+  "version": ""
+}
+2026-09-04T02:40:11.679Z [INFO] Project config: {
+  "buildTool": {
+    "path": "C:\\Program Files\\apache-maven-3.9.14\\bin",
+    "name": "mvn",
+    "version": ""
+  },
+  "jdk": {
+    "path": "C:\\Program Files\\Java\\jdk-17\\bin",
+    "name": "java",
+    "version": "17"
+  },
+  "name": "BigBasket-main",
+  "dir": "d:\\BigBasket-main\\BigBasket-main"
+}
+2026-09-04T02:40:11.679Z [INFO] Building project before running tests...
+2026-09-04T02:40:11.680Z [INFO] [MavenBuildTool] Getting build errors of d:\BigBasket-main\BigBasket-main using Maven
+2026-09-04T02:40:11.683Z [INFO] [Environment] Running command (Java undefined): mvn clean test-compile -q -B -fn -Dossindex.skip=true -Dlicense.skip=true -Dcheckstyle.skip=true -DskipLicenseCheck=true -DskipCheckStyle=true -Dpmd.skip=true -Denforcer.skip=true -Drat.skip=true
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------< com.bigbasket:basket-studio >---------------------
+[INFO] Building basket-studio 1.0.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- help:3.4.1:effective-pom (default-cli) @ basket-studio ---
+[INFO] Effective-POM written to: d:\BigBasket-main\BigBasket-main\effective-pom-18424a15-a159-4cfc-9745-5693079a4195.log
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  7.355 s
+[INFO] Finished at: 2026-09-04T08:10:19+05:30
+[INFO] ------------------------------------------------------------------------
+2026-09-04T02:40:19.911Z [INFO] [BaseBuildTool] Found 1 modules: .
+2026-09-04T02:40:19.934Z [INFO] [BaseBuildTool] Finish counting Java and class files
+2026-09-04T02:40:19.934Z [INFO] [MavenBuildTool] Cleaning d:\BigBasket-main\BigBasket-main using Maven
+2026-09-04T02:40:19.937Z [INFO] [Environment] Running command (Java undefined): mvn clean -q -B -fn
+2026-09-04T02:40:23.587Z [INFO] [MavenBuildTool] parsing compilation errors.
+2026-09-04T02:40:23.588Z [INFO] [MavenBuildTool] Getting all module coordinates of d:\BigBasket-main\BigBasket-main
+2026-09-04T02:40:23.588Z [INFO] [MavenBuildTool] Getting effective POMs of d:\BigBasket-main\BigBasket-main
+2026-09-04T02:40:23.591Z [INFO] [Environment] Running command (Java undefined): mvn help:effective-pom -Doutput=effective-pom-93d1de51-78c4-41bd-b261-566dce77c479.log
+2026-09-04T02:40:23.791Z [INFO] [MavenBuildTool] Getting Java version of d:\BigBasket-main\BigBasket-main from pom.xml
+2026-09-04T02:40:23.791Z [INFO] [MavenBuildTool] Searching for pom.xml files in d:\BigBasket-main\BigBasket-main
+2026-09-04T02:40:23.791Z [INFO] [MavenBuildTool] Found pom.xml files: d:\BigBasket-main\BigBasket-main\pom.xml
+2026-09-04T02:40:23.792Z [INFO] [MavenBuildTool] Java version found in d:\BigBasket-main\BigBasket-main\pom.xml: 17
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------< com.bigbasket:basket-studio >---------------------
+[INFO] Building basket-studio 1.0.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- help:3.4.1:effective-pom (default-cli) @ basket-studio ---
+[INFO] Effective-POM written to: d:\BigBasket-main\BigBasket-main\effective-pom-93d1de51-78c4-41bd-b261-566dce77c479.log
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  1.524 s
+[INFO] Finished at: 2026-09-04T08:10:27+05:30
+[INFO] ------------------------------------------------------------------------
+2026-09-04T02:40:27.866Z [INFO] [BaseBuildTool] Found 1 modules: .
+2026-09-04T02:40:27.879Z [INFO] [BaseBuildTool] Finish counting Java and class files
+2026-09-04T02:40:27.879Z [INFO] [MavenBuildTool] Cleaning d:\BigBasket-main\BigBasket-main using Maven
+2026-09-04T02:40:27.882Z [INFO] [Environment] Running command (Java undefined): mvn clean -q -B -fn
+2026-09-04T02:40:31.002Z [INFO] Running tests...
+2026-09-04T02:40:31.003Z [INFO] [MavenBuildTool] Running test cases of d:\BigBasket-main\BigBasket-main using Maven
+2026-09-04T02:40:31.006Z [INFO] [Environment] Running command (Java undefined): mvn clean test -q -B -fn
+2026-09-04T02:40:38.098Z [INFO] [MavenBuildTool] loading surefire reports.
+2026-09-04T02:40:38.117Z [INFO] [MavenBuildTool] summarizing surefire reports.
+2026-09-04T02:40:38.117Z [INFO] [Tool.invoke]({result: {
+  "message": "All tests passed! There are no test errors/failures in the project.",
+  "result": {
+    "errors": [],
+    "failures": [],
+    "summary": {
+      "tests": 0,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "reports": []
+  },
+  "telemetry": {
+    "result": "succeeded"
+  }
+}}).
+2026-09-04T02:40:38.117Z [INFO] ----------------------invoked appmod-run-tests-for-java----------------------
+2026-09-04T02:40:39.804Z [INFO] ---------------------prepare appmod-report-event----------------------
+2026-09-04T02:40:39.804Z [INFO] [Tool.prepareInvocation]({name: appmod-report-event, input: {
+  "sessionId": "20260904023403",
+  "projectPath": "d:\\BigBasket-main\\BigBasket-main",
+  "event": "testCompleted",
+  "status": "succeeded",
+  "phase": "execute",
+  "message": "Baseline test suite passed with JDK 17."
+}}).
+2026-09-04T02:40:39.805Z [INFO] [Tool.prepareInvocation] do prepare invocation.
+2026-09-04T02:40:39.805Z [INFO] [Tool.prepareInvocation]({result: {
+  "invocationMessage": "Report upgrade event"
+}}).
+2026-09-04T02:40:39.805Z [INFO] ----------------------prepared appmod-report-event----------------------
+2026-09-04T02:40:39.860Z [INFO] ----------------------invoke appmod-report-event----------------------
+2026-09-04T02:40:39.860Z [INFO] [Tool.invoke]({name: appmod-report-event, modelId: auto, input: {
+  "sessionId": "20260904023403",
+  "projectPath": "d:\\BigBasket-main\\BigBasket-main",
+  "event": "testCompleted",
+  "status": "succeeded",
+  "phase": "execute",
+  "message": "Baseline test suite passed with JDK 17."
+}}).
+2026-09-04T02:40:39.860Z [INFO] [Tool.invoke] do invoke.
+2026-09-04T02:40:39.861Z [INFO] [Tool.invoke]({result: {
+  "message": "Event 'testCompleted' reported!\nSession ID: 20260904023403,\nSession Dir: d:\\BigBasket-main\\BigBasket-main\\.github\\modernize\\java-upgrade\\20260904023403"
+}}).
+2026-09-04T02:40:39.861Z [INFO] ----------------------invoked appmod-report-event----------------------
+2026-09-04T02:40:47.439Z [INFO] ---------------------prepare appmod-report-event----------------------
+2026-09-04T02:40:47.440Z [INFO] [Tool.prepareInvocation]({name: appmod-report-event, input: {
+  "sessionId": "20260904023403",
+  "projectPath": "d:\\BigBasket-main\\BigBasket-main",
+  "event": "upgradeStepStarted",
+  "status": "succeeded",
+  "phase": "execute",
+  "details": {
+    "stepNumber": 3,
+    "stepTitle": "Set Java 25 Build Target"
+  },
+  "message": "Applying the Java 25 Maven target."
+}}).
+2026-09-04T02:40:47.440Z [INFO] [Tool.prepareInvocation] do prepare invocation.
+2026-09-04T02:40:47.447Z [INFO] [Tool.prepareInvocation]({result: {
+  "invocationMessage": "Report upgrade event"
+}}).
+2026-09-04T02:40:47.447Z [INFO] ----------------------prepared appmod-report-event----------------------
+2026-09-04T02:40:47.576Z [INFO] ----------------------invoke appmod-report-event----------------------
+2026-09-04T02:40:47.577Z [INFO] [Tool.invoke]({name: appmod-report-event, modelId: auto, input: {
+  "sessionId": "20260904023403",
+  "projectPath": "d:\\BigBasket-main\\BigBasket-main",
+  "event": "upgradeStepStarted",
+  "status": "succeeded",
+  "phase": "execute",
+  "details": {
+    "stepNumber": 3,
+    "stepTitle": "Set Java 25 Build Target"
+  },
+  "message": "Applying the Java 25 Maven target."
+}}).
+2026-09-04T02:40:47.577Z [INFO] [Tool.invoke] do invoke.
+2026-09-04T02:40:47.579Z [INFO] [Tool.invoke]({result: {
+  "message": "Event 'upgradeStepStarted' reported!\nSession ID: 20260904023403,\nSession Dir: d:\\BigBasket-main\\BigBasket-main\\.github\\modernize\\java-upgrade\\20260904023403"
+}}).
+2026-09-04T02:40:47.579Z [INFO] ----------------------invoked appmod-report-event----------------------
+2026-09-04T02:41:02.556Z [INFO] ---------------------prepare appmod-build-java-project----------------------
+2026-09-04T02:41:02.556Z [INFO] [Tool.prepareInvocation]({name: appmod-build-java-project, input: {
+  "sessionId": "20260904023403",
+  "projectPath": "d:\\BigBasket-main\\BigBasket-main",
+  "jdkPath": "C:\\Users\\jaite\\.jdk\\jdk-25.0.2",
+  "buildToolPath": "C:\\Program Files\\apache-maven-3.9.14"
+}}).
+2026-09-04T02:41:02.556Z [INFO] [Tool.prepareInvocation] do prepare invocation.
+2026-09-04T02:41:02.556Z [INFO] [Tool.prepareInvocation]({result: {
+  "invocationMessage": "Build project"
+}}).
+2026-09-04T02:41:02.556Z [INFO] ----------------------prepared appmod-build-java-project----------------------
+2026-09-04T02:41:02.601Z [INFO] ----------------------invoke appmod-build-java-project----------------------
+2026-09-04T02:41:02.602Z [INFO] [Tool.invoke]({name: appmod-build-java-project, modelId: auto, input: {
+  "sessionId": "20260904023403",
+  "projectPath": "d:\\BigBasket-main\\BigBasket-main",
+  "jdkPath": "C:\\Users\\jaite\\.jdk\\jdk-25.0.2",
+  "buildToolPath": "C:\\Program Files\\apache-maven-3.9.14"
+}}).
+2026-09-04T02:41:02.602Z [INFO] [Tool.invoke] do invoke.
+2026-09-04T02:41:02.602Z [INFO] Project d:\BigBasket-main\BigBasket-main is a maven project, try to get java version from pom.xml
+2026-09-04T02:41:02.604Z [INFO] Project java version: 25
+2026-09-04T02:41:02.604Z [INFO] Build tool type detected from path: mvn
+2026-09-04T02:41:02.605Z [INFO] Build tool type: mvn
+2026-09-04T02:41:02.605Z [INFO] JDK: {
+  "name": "java",
+  "path": "C:\\Users\\jaite\\.jdk\\jdk-25.0.2\\bin",
+  "version": "25"
+}
+2026-09-04T02:41:02.605Z [INFO] Build tool: {
+  "name": "mvn",
+  "path": "C:\\Program Files\\apache-maven-3.9.14\\bin",
+  "version": ""
+}
+2026-09-04T02:41:02.605Z [INFO] Project config: {
+  "buildTool": {
+    "path": "C:\\Program Files\\apache-maven-3.9.14\\bin",
+    "name": "mvn",
+    "version": ""
+  },
+  "jdk": {
+    "path": "C:\\Users\\jaite\\.jdk\\jdk-25.0.2\\bin",
+    "name": "java",
+    "version": "25"
+  },
+  "name": "BigBasket-main",
+  "dir": "d:\\BigBasket-main\\BigBasket-main"
+}
+2026-09-04T02:41:02.605Z [INFO] [MavenBuildTool] Getting build errors of d:\BigBasket-main\BigBasket-main using Maven
+2026-09-04T02:41:02.608Z [INFO] [Environment] Running command (Java undefined): mvn clean test-compile -q -B -fn -Dossindex.skip=true -Dlicense.skip=true -Dcheckstyle.skip=true -DskipLicenseCheck=true -DskipCheckStyle=true -Dpmd.skip=true -Denforcer.skip=true -Drat.skip=true
+2026-09-04T02:41:13.389Z [INFO] [MavenBuildTool] parsing compilation errors.
+2026-09-04T02:41:13.390Z [INFO] [MavenBuildTool] Getting all module coordinates of d:\BigBasket-main\BigBasket-main
+2026-09-04T02:41:13.390Z [INFO] [MavenBuildTool] Getting effective POMs of d:\BigBasket-main\BigBasket-main
+2026-09-04T02:41:13.392Z [INFO] [Environment] Running command (Java undefined): mvn help:effective-pom -Doutput=effective-pom-a885c4cc-dd87-4b5c-9dad-928c901e4946.log
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------< com.bigbasket:basket-studio >---------------------
+[INFO] Building basket-studio 1.0.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- help:3.4.1:effective-pom (default-cli) @ basket-studio ---
+[INFO] Effective-POM written to: d:\BigBasket-main\BigBasket-main\effective-pom-a885c4cc-dd87-4b5c-9dad-928c901e4946.log
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  3.299 s
+[INFO] Finished at: 2026-09-04T08:11:18+05:30
+[INFO] ------------------------------------------------------------------------
+2026-09-04T02:41:18.852Z [INFO] [BaseBuildTool] Found 1 modules: .
+2026-09-04T02:41:18.860Z [INFO] [BaseBuildTool] Finish counting Java and class files
+2026-09-04T02:41:18.860Z [INFO] [MavenBuildTool] Cleaning d:\BigBasket-main\BigBasket-main using Maven
+2026-09-04T02:41:18.861Z [INFO] [Environment] Running command (Java undefined): mvn clean -q -B -fn
+2026-09-04T02:41:21.214Z [INFO] [MavenBuildTool] Getting Java version of d:\BigBasket-main\BigBasket-main from pom.xml
+2026-09-04T02:41:21.214Z [INFO] [MavenBuildTool] Searching for pom.xml files in d:\BigBasket-main\BigBasket-main
+2026-09-04T02:41:21.214Z [INFO] Build succeeded! There are no build errors in the project.
+2026-09-04T02:41:21.214Z [INFO] [MavenBuildTool] Found pom.xml files: d:\BigBasket-main\BigBasket-main\pom.xml
+2026-09-04T02:41:21.214Z [INFO] [Tool.invoke]({result: {
+  "message": "Build succeeded! There are no build errors in the project.",
+  "result": {
+    "numOfJavaFiles": 9,
+    "numOfClassFiles": 9,
+    "modulesBuildResult": {
+      ".": {
+        "numOfJavaFiles": 9,
+        "numOfClassFiles": 9
+      }
+    },
+    "errors": [],
+    "command": "mvn clean test-compile -q -B -fn -Dossindex.skip=true -Dlicense.skip=true -Dcheckstyle.skip=true -DskipLicenseCheck=true -DskipCheckStyle=true -Dpmd.skip=true -Denforcer.skip=true -Drat.skip=true"
+  },
+  "telemetry": {
+    "result": "succeeded"
+  }
+}}).
+2026-09-04T02:41:21.214Z [INFO] ----------------------invoked appmod-build-java-project----------------------
+2026-09-04T02:41:21.216Z [INFO] [MavenBuildTool] Java version found in d:\BigBasket-main\BigBasket-main\pom.xml: 25
+2026-09-04T02:41:27.354Z [INFO] ---------------------prepare appmod-report-event----------------------
+2026-09-04T02:41:27.355Z [INFO] [Tool.prepareInvocation]({name: appmod-report-event, input: {
+  "sessionId": "20260904023403",
+  "projectPath": "d:\\BigBasket-main\\BigBasket-main",
+  "event": "buildCompleted",
+  "status": "succeeded",
+  "phase": "execute",
+  "message": "Java 25 main and test compilation succeeded."
+}}).
+2026-09-04T02:41:27.355Z [INFO] [Tool.prepareInvocation] do prepare invocation.
+2026-09-04T02:41:27.355Z [INFO] [Tool.prepareInvocation]({result: {
+  "invocationMessage": "Report upgrade event"
+}}).
+2026-09-04T02:41:27.355Z [INFO] ----------------------prepared appmod-report-event----------------------
+2026-09-04T02:41:27.850Z [INFO] ----------------------invoke appmod-report-event----------------------
+2026-09-04T02:41:27.851Z [INFO] [Tool.invoke]({name: appmod-report-event, modelId: auto, input: {
+  "sessionId": "20260904023403",
+  "projectPath": "d:\\BigBasket-main\\BigBasket-main",
+  "event": "buildCompleted",
+  "status": "succeeded",
+  "phase": "execute",
+  "message": "Java 25 main and test compilation succeeded."
+}}).
+2026-09-04T02:41:27.851Z [INFO] [Tool.invoke] do invoke.
+2026-09-04T02:41:27.853Z [INFO] Project d:\BigBasket-main\BigBasket-main is a maven project, try to get java version from pom.xml
+2026-09-04T02:41:27.855Z [INFO] [Tool.invoke]({result: {
+  "message": "Event 'buildCompleted' reported!\nSession ID: 20260904023403,\nSession Dir: d:\\BigBasket-main\\BigBasket-main\\.github\\modernize\\java-upgrade\\20260904023403"
+}}).
+2026-09-04T02:41:27.856Z [INFO] ----------------------invoked appmod-report-event----------------------
+2026-09-04T02:41:27.902Z [INFO] Project java version: 25
+2026-09-04T02:41:27.902Z [INFO] Maven project detected.
+2026-09-04T02:41:27.915Z [INFO] Build tool type: mvn
+2026-09-04T02:41:28.123Z [INFO] JDK: {
+  "name": "java",
+  "path": "C:\\Users\\jaite\\.jdk\\jdk-25.0.2\\bin",
+  "version": "25"
+}
+2026-09-04T02:41:28.128Z [INFO] Build tool: {
+  "name": "mvn",
+  "path": "C:\\Program Files\\apache-maven-3.9.14\\bin",
+  "version": "",
+  "source": "MAVEN_HOME,PATH"
+}
+2026-09-04T02:41:28.128Z [INFO] Project config: {
+  "buildTool": {
+    "path": "C:\\Program Files\\apache-maven-3.9.14\\bin",
+    "name": "mvn",
+    "version": "",
+    "source": "MAVEN_HOME,PATH"
+  },
+  "jdk": {
+    "path": "C:\\Users\\jaite\\.jdk\\jdk-25.0.2\\bin",
+    "name": "java",
+    "version": "25"
+  },
+  "name": "BigBasket-main",
+  "dir": "d:\\BigBasket-main\\BigBasket-main"
+}
+2026-09-04T02:41:28.129Z [INFO] [MavenBuildTool] Getting all module coordinates of d:\BigBasket-main\BigBasket-main
+2026-09-04T02:41:28.129Z [INFO] [MavenBuildTool] Getting effective POMs of d:\BigBasket-main\BigBasket-main
+2026-09-04T02:41:28.133Z [INFO] [Environment] Running command (Java undefined): mvn help:effective-pom -Doutput=effective-pom-7b13cbf6-dc63-4aaa-8704-f742d57e3e30.log
