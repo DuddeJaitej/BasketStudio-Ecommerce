@@ -73,11 +73,11 @@ mvn clean package -DskipTests
 mvn spring-boot:run
 ```
 
-The server uses port `8086` by default. Keep this terminal running.
+The server uses port `8087` by default. Keep this terminal running.
 
 ### 4. Open the frontend
 
-Open [http://localhost:8086](http://localhost:8086) in your browser.
+Open [http://localhost:8087](http://localhost:8087) in your browser.
 
 ### 5. Stop the application
 
@@ -120,11 +120,21 @@ $env:DB_PASSWORD="the_password_you_set"
 
 ### Start with MySQL
 
+Set these variables in the same PowerShell window where you start Maven. Replace the password placeholder with your actual local MySQL password; do not put it in `application-mysql.properties`.
+
 ```powershell
 cd D:\BigBasket-main\BigBasket-main
 $env:DB_USERNAME="root"
 $env:DB_PASSWORD="your_mysql_password"
 mvn spring-boot:run "-Dspring-boot.run.profiles=mysql"
+```
+
+Confirm that the variables are set without displaying the password:
+
+```powershell
+if ([string]::IsNullOrWhiteSpace($env:DB_USERNAME) -or [string]::IsNullOrWhiteSpace($env:DB_PASSWORD)) {
+  throw "Set DB_USERNAME and DB_PASSWORD in this PowerShell window before starting MySQL profile."
+}
 ```
 
 The MySQL profile connects to:
@@ -151,7 +161,15 @@ The application URL also includes `createDatabaseIfNotExist=true`.
 
 ### Access denied for user `root`
 
-This means MySQL rejected the password or the user does not have permission. Create the dedicated user using [database/create-app-user.sql](database/create-app-user.sql), then run:
+This means MySQL rejected the password or no password was supplied. The log message `using password: NO` means `$env:DB_PASSWORD` was not set in the current PowerShell window. Set the credentials again, then run:
+
+```powershell
+$env:DB_USERNAME="root"
+$env:DB_PASSWORD="your_mysql_password"
+mvn spring-boot:run "-Dspring-boot.run.profiles=mysql"
+```
+
+Alternatively, create the dedicated `basket_app` user using [database/create-app-user.sql](database/create-app-user.sql), then set its credentials:
 
 ```powershell
 $env:DB_USERNAME="basket_app"
@@ -167,12 +185,12 @@ USE basket_studio;
 SHOW TABLES;
 ```
 
-### Port 8086 already in use
+### Port 8087 already in use
 
-Find the process using port 8086:
+Find the process using port 8087:
 
 ```powershell
-Get-NetTCPConnection -LocalPort 8086 -State Listen
+Get-NetTCPConnection -LocalPort 8087 -State Listen
 ```
 
 Stop only the stale application process if necessary, then run Spring Boot again.
@@ -269,7 +287,7 @@ BigBasket-main/
 ```mermaid
 flowchart LR
   Browser[Browser] --> Static[Spring Boot static frontend]
-  Static --> ApiConfig[api-config.js\nhttp://localhost:8086]
+  Static --> ApiConfig[api-config.js\nhttp://localhost:8087]
   ApiConfig --> Controller[JpaStoreController\nREST API]
   Controller --> Repositories[Spring Data JPA repositories]
   Repositories --> H2[(H2 in-memory database)]
@@ -283,33 +301,33 @@ flowchart LR
 
 ### 1. Storefront and catalog
 
-The main storefront is available at [http://localhost:8086](http://localhost:8086). It displays products, supports fruit and vegetable category views, and manages the shopping basket and checkout flow.
+The main storefront is available at [http://localhost:8087](http://localhost:8087). It displays products, supports fruit and vegetable category views, and manages the shopping basket and checkout flow.
 
 Related pages:
 
-- [Fruits catalog](http://localhost:8086/fruits.html)
-- [Vegetables catalog](http://localhost:8086/vegetables1.html)
-- [Basket checkout](http://localhost:8086/BasketPaymentForm.html)
+- [Fruits catalog](http://localhost:8087/fruits.html)
+- [Vegetables catalog](http://localhost:8087/vegetables1.html)
+- [Basket checkout](http://localhost:8087/BasketPaymentForm.html)
 
 ### 2. Profile and order history
 
-The profile page is available at [http://localhost:8086/profile.html](http://localhost:8086/profile.html). After login, it displays the user profile and order history.
+The profile page is available at [http://localhost:8087/profile.html](http://localhost:8087/profile.html). After login, it displays the user profile and order history.
 
 Related pages:
 
-- [Login](http://localhost:8086/login.html)
-- [Signup](http://localhost:8086/signup.html)
-- [Profile and orders](http://localhost:8086/profile.html)
+- [Login](http://localhost:8087/login.html)
+- [Signup](http://localhost:8087/signup.html)
+- [Profile and orders](http://localhost:8087/profile.html)
 
 ## Important Frontend URLs
 
 ```text
-http://localhost:8086/                 Main storefront
-http://localhost:8086/login.html       Login page
-http://localhost:8086/signup.html      Registration entry page
-http://localhost:8086/profile.html     Profile and order history
-http://localhost:8086/fruits.html      Fruits catalog view
-http://localhost:8086/vegetables1.html Vegetables catalog view
+http://localhost:8087/                 Main storefront
+http://localhost:8087/login.html       Login page
+http://localhost:8087/signup.html      Registration entry page
+http://localhost:8087/profile.html     Profile and order history
+http://localhost:8087/fruits.html      Fruits catalog view
+http://localhost:8087/vegetables1.html Vegetables catalog view
 ```
 
 ## Build and Package
