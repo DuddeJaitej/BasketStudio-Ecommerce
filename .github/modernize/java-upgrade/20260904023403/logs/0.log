@@ -498,3 +498,26 @@
 2026-09-04T02:41:28.129Z [INFO] [MavenBuildTool] Getting all module coordinates of d:\BigBasket-main\BigBasket-main
 2026-09-04T02:41:28.129Z [INFO] [MavenBuildTool] Getting effective POMs of d:\BigBasket-main\BigBasket-main
 2026-09-04T02:41:28.133Z [INFO] [Environment] Running command (Java undefined): mvn help:effective-pom -Doutput=effective-pom-7b13cbf6-dc63-4aaa-8704-f742d57e3e30.log
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------------< com.bigbasket:basket-studio >---------------------
+[INFO] Building basket-studio 1.0.0
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- help:3.4.1:effective-pom (default-cli) @ basket-studio ---
+[INFO] Effective-POM written to: d:\BigBasket-main\BigBasket-main\effective-pom-7b13cbf6-dc63-4aaa-8704-f742d57e3e30.log
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  2.130 s
+[INFO] Finished at: 2026-09-04T08:11:31+05:30
+[INFO] ------------------------------------------------------------------------
+2026-09-04T02:41:32.246Z [INFO] [BaseBuildTool] Found 1 modules: .
+2026-09-04T02:41:32.284Z [INFO] [BaseBuildTool] Finish counting Java and class files
+2026-09-04T02:41:32.284Z [INFO] [MavenBuildTool] Cleaning d:\BigBasket-main\BigBasket-main using Maven
+2026-09-04T02:41:32.289Z [INFO] [Environment] Running command (Java undefined): mvn clean -q -B -fn
+2026-09-04T02:41:35.676Z [INFO] [MavenBuildTool] Getting Java version of d:\BigBasket-main\BigBasket-main from pom.xml
+2026-09-04T02:41:35.678Z [INFO] [MavenBuildTool] Searching for pom.xml files in d:\BigBasket-main\BigBasket-main
+2026-09-04T02:41:35.678Z [INFO] [MavenBuildTool] Found pom.xml files: d:\BigBasket-main\BigBasket-main\pom.xml
+2026-09-04T02:41:35.812Z [INFO] [MavenBuildTool] Java version found in d:\BigBasket-main\BigBasket-main\pom.xml: 25

@@ -24,8 +24,7 @@ Premium grocery shopping app built with Spring Boot, Hibernate, JPA, MySQL, and 
 
 ## Requirements
 
-Install the following before running the project:
-
+Install Java 21, Maven, and MySQL 8 if you want to use the MySQL profile. H2 is included for the simplest local run.
 
 Check your installations:
 
@@ -52,20 +51,45 @@ cd BigBasket-main
 
 You should see `pom.xml`, `src`, and `database` in the current directory.
 
-## Run Locally with H2
+## Run Locally from Start to Finish
+
+The default profile uses an in-memory H2 database, creates the tables automatically, and seeds the products. No MySQL setup is required.
+
+### 1. Open the Maven project
+
+```powershell
+cd D:\BigBasket-main\BigBasket-main
+```
+
+### 2. Build the application
+
+```powershell
+mvn clean package -DskipTests
+```
+
+### 3. Start the application
+
+```powershell
+mvn spring-boot:run
+```
+
+The server uses port `8086` by default. Keep this terminal running.
+
+### 4. Open the frontend
+
+Open [http://localhost:8086](http://localhost:8086) in your browser.
+
+### 5. Stop the application
+
+Press `Ctrl+C` in the terminal running Spring Boot.
+
+### Run Locally with H2
 
 H2 is the easiest way to test the application without configuring MySQL. Data is recreated when the application restarts.
 
 ```powershell
 cd D:\BigBasket-main\BigBasket-main
-mvn clean package
 mvn spring-boot:run
-```
-
-Open the application:
-
-```text
-http://localhost:8080
 ```
 
 The H2 development profile uses:
@@ -98,6 +122,8 @@ $env:DB_PASSWORD="the_password_you_set"
 
 ```powershell
 cd D:\BigBasket-main\BigBasket-main
+$env:DB_USERNAME="root"
+$env:DB_PASSWORD="your_mysql_password"
 mvn spring-boot:run "-Dspring-boot.run.profiles=mysql"
 ```
 
@@ -141,12 +167,12 @@ USE basket_studio;
 SHOW TABLES;
 ```
 
-### Port 8080 already in use
+### Port 8086 already in use
 
-Find the process using port 8080:
+Find the process using port 8086:
 
 ```powershell
-Get-NetTCPConnection -LocalPort 8080 -State Listen
+Get-NetTCPConnection -LocalPort 8086 -State Listen
 ```
 
 Stop only the stale application process if necessary, then run Spring Boot again.
@@ -238,15 +264,52 @@ BigBasket-main/
 └── README.md
 ```
 
+## Application Architecture
+
+```mermaid
+flowchart LR
+  Browser[Browser] --> Static[Spring Boot static frontend]
+  Static --> ApiConfig[api-config.js\nhttp://localhost:8086]
+  ApiConfig --> Controller[JpaStoreController\nREST API]
+  Controller --> Repositories[Spring Data JPA repositories]
+  Repositories --> H2[(H2 in-memory database)]
+  Repositories --> MySQL[(MySQL basket_studio)]
+  Controller --> Auth[Authentication and bearer sessions]
+  Controller --> Orders[Orders and checkout]
+  Controller --> Products[Product catalog]
+```
+
+## Frontend Pages
+
+### 1. Storefront and catalog
+
+The main storefront is available at [http://localhost:8086](http://localhost:8086). It displays products, supports fruit and vegetable category views, and manages the shopping basket and checkout flow.
+
+Related pages:
+
+- [Fruits catalog](http://localhost:8086/fruits.html)
+- [Vegetables catalog](http://localhost:8086/vegetables1.html)
+- [Basket checkout](http://localhost:8086/BasketPaymentForm.html)
+
+### 2. Profile and order history
+
+The profile page is available at [http://localhost:8086/profile.html](http://localhost:8086/profile.html). After login, it displays the user profile and order history.
+
+Related pages:
+
+- [Login](http://localhost:8086/login.html)
+- [Signup](http://localhost:8086/signup.html)
+- [Profile and orders](http://localhost:8086/profile.html)
+
 ## Important Frontend URLs
 
 ```text
-http://localhost:8080/                 Main storefront
-http://localhost:8080/login.html       Login page
-http://localhost:8080/signup.html      Registration entry page
-http://localhost:8080/profile.html     Profile and order history
-http://localhost:8080/fruits.html      Fruits catalog view
-http://localhost:8080/vegetables1.html Vegetables catalog view
+http://localhost:8086/                 Main storefront
+http://localhost:8086/login.html       Login page
+http://localhost:8086/signup.html      Registration entry page
+http://localhost:8086/profile.html     Profile and order history
+http://localhost:8086/fruits.html      Fruits catalog view
+http://localhost:8086/vegetables1.html Vegetables catalog view
 ```
 
 ## Build and Package
