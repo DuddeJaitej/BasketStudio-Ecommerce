@@ -410,3 +410,10 @@ window.BASKET_API_URL = 'https://your-backend-host.example.com';
 ```
 
 Push that change to GitHub so Vercel redeploys it. Do not add a trailing slash. The bridge automatically applies the URL to requests from `app.js`, `login.js`, and `profile.js`. Also configure CORS on the backend for the exact Vercel domain.
+
+
+
+
+<img width="1888" height="861" alt="Screenshot 2026-09-06 224421" src="https://github.com/user-attachments/assets/86d7b44a-4646-4821-9173-69d19818bebe" />
+<img width="1912" height="862" alt="Screenshot 2026-09-06 224248" src="https://github.com/user-attachments/assets/fd93a854-33de-4740-95d0-af5c80ed27c1" />
+<img width="391" height="266" alt="Screenshot 2026-09-06 224431" src="https://github.com/user-attachments/assets/7bbce3fb-15d0-4e3f-8637-65cc2299462a" />
