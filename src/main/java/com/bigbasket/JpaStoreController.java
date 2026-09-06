@@ -19,7 +19,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 @RestController
 @RequestMapping("/api")
-@CrossOrigin(origins = "${FRONTEND_URL:https://basket-studio-ecommerce.vercel.app}")
+@CrossOrigin(origins = "${app.frontend-url:http://localhost:8086}")
 public class JpaStoreController {
     private final UserRepository users;
     private final ProductRepository products;
